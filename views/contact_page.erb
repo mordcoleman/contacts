@@ -1,0 +1,20 @@
+<ul>
+  <li>
+    <label for="contact_name">Name:</label>
+    <%= @contact[:name]%>
+  </li>
+  <li>
+    <label for="contact_phone">Phone:</label>
+    <%= @contact[:phone]%>
+  </li>
+  <li>
+    <label for="contact_email">Email:</label>
+    <%= @contact[:email]%>
+  </li>
+</ul>
+<a href="/home/<%=@contact[:id]%>/add_to_group">Add to Group</a>
+<a href="/home/<%=@contact[:id]%>/edit">Edit</a>
+<form action="/home/<%=@contact[:id]%>/delete" method="post">
+  <button type="submit" >Delete Contact</button>
+</form>
+<p><a href="/home">Back</a></p>

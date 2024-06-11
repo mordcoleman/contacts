@@ -1,0 +1,18 @@
+<h3> <%= @group[:type]%> </h3>
+<% if group_empty?(@group[:id])%>
+  <%= "No contacts here yet."%>
+<% else%>
+  <ul>
+    <% @group_contacts.each do |contact|%>
+    <li>
+      <a href="/home/<%= contact[:id]%>">
+      <%= contact[:name]%>
+      </a>
+      <form action="/home/group/<%= @group_id%>/remove/<%= contact[:id]%>" method="post">
+      <button type="submit" >Remove</button>
+      </form>
+    </li>
+    <%end%>
+  </ul>
+<% end%>
+<p><a href="/home">Back</a></p>

@@ -1,0 +1,30 @@
+<h2>Contacts</h2>
+
+<p><a href="/new">Add a new contact</a></p>
+
+<form action="/search" method="get">
+  <input name="query" placeholder="Find contacts" value="<%= params[:query] %>"/>
+  <button type="submit">Search</button>
+</form>
+
+<h3>Groups</h3>
+<ul>
+<% @groups.each do |group|%>
+  <li>
+    <a href="/home/group/<%= group[:id]%>">
+    <%= group[:type]%>
+    </a>
+  </li>
+   <%end%>
+</ul>
+
+<h3> All Contacts </h3>
+<ul>
+  <% @contacts.each do |contact|%>
+  <li>
+    <a href="/home/<%= contact[:id]%>">
+    <%= contact[:name]%>
+    </a>
+  </li>
+   <%end%>
+</ul>

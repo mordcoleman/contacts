@@ -1,0 +1,13 @@
+<p>Select the group you'd like to add <%= @contact[:name] %> to:</p>
+ <ul>
+  <% @groups.each do |group|%>
+   <li>
+  <form action="/home/groups/add/<%= @contact[:id]%>" method="post">
+      <label for="group_name"><%= group[:type]%></label>
+     <input name="group_name" type="radio" value="<%= group[:type]%>">
+    </li>
+    <%end%>
+    <input type="submit" value="Select">
+    <p><a href="/home">Cancel</a></p>
+  </ul>
+</form>

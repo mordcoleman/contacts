@@ -1,0 +1,34 @@
+body {
+  font: normal 20px "PT Sans", Helvetica, Arial, sans-serif;
+  color: #3f3f3f;
+  background: #ffffff;
+}
+
+body > header {
+  max-width: 1000px;
+  padding: 85px 0 35px 0;
+  margin: 0 auto;
+}
+
+.flash {
+  max-width: 960px;
+  padding: 10px 20px;
+  margin: 20px auto 1.5em auto;
+  color: #3399cc;
+  background: #CBE5F2;
+}
+
+.flash p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.flash.error {
+  color: #ff3336;
+  background: #e7dc0c;
+}
+
+.flash.success {
+  color: #4d33cc;
+  background: #CBF2E5;
+}

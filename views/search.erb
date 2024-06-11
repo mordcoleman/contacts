@@ -1,0 +1,15 @@
+<% if @results.empty? %>
+    <p><% session[:error] = "Sorry, no matches were found."%></p>
+<% else %>
+  <h2>Results for '<%= @query%>'</h2>
+      <% @results.each do |contact| %>
+      <% #binding.pry%>
+      <li>
+      <a href="/home/<%= contact[:id]%>">
+      <%= contact[:name]%>
+      </a>
+    </li>
+  <% end%>
+<% end%>
+<a href="/home">Back</a>
+
